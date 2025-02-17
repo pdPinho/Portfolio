@@ -1,0 +1,25 @@
+---
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+const { pageTitle } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta property="og:title" content="Pedro Pinho" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="Pedro Pinho's Portfolio" />
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		
+		<title>{ pageTitle }</title>
+	</head>
+	<body class="bg-[#0B0D16] w-full h-full pt-32 gap-2.5">
+		<slot />
+		<Footer />
+	</body>
+</html>
