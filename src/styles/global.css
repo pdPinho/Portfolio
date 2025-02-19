@@ -43,6 +43,147 @@ h1, h2, h3 {
     color: #A2A372;
 }
 
+#hero::after{
+    content: "";
+    z-index: -1;
+    background-image: url(../assets/background_divider.png);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: absolute;
+    display: block;
+}
+
+#projects::before{
+    content: "";
+    z-index: -1;
+    background-image: url(../assets/background_divider.png);
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    transform: rotate(180deg);
+    transform: scaleY(-1);
+    position: absolute;
+    display: block;
+}
+
+
 #currentWork h3, h4, h5, h6 {
     color: #A2A372;
+}
+
+#skills li:hover, img:not{
+    filter: blur(10px);
+}
+
+.scaleImg {
+    transform: scale(1);
+    transition: transform 0.3s ease-out;
+}
+
+.scaleImg:hover {
+    transform: scale(1.2);
+}
+
+.speech-bubble:hover::after {
+    content: attr(data-after-content);
+    position: absolute;
+    bottom: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.itemCareer {
+    transform: scale(1);
+    transition: transform 0.3s ease-out;
+    font-size: 0.9rem;
+}
+
+.itemCareer:hover {
+    transform: scale(1.1);
+    background-color: #15192b;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+#career:has(li:hover) li:not(:hover) {
+    filter: blur(4px)
+}
+
+@media (max-width: 768px) {
+    .speech-bubble:hover::after {
+        font-size: 12px;
+        bottom: -25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .speech-bubble {
+        font-size: 12px;
+    }
+
+    .speech-bubble:hover::after {
+        font-size: 10px;
+        bottom: -20px;
+    }
+}
+
+.content {
+    outline: 1px solid transparent;
+    border-radius: 15px;
+}
+
+.content:hover {
+    outline: 1px solid #A8B0C6;
+}
+
+#videogames_websites:has(div:hover) #websites:not(:hover){
+    filter: blur(4px);
+}
+
+#videogames_websites:has(div:hover) #video_games:not(:hover){
+    filter: blur(4px);
+}
+
+#video_games {
+    border-radius: 15px;
+    outline: 1px solid transparent;
+    transition: outline 0.3s ease;
+}
+
+#video_games:hover {
+    outline: 1px solid #A8B0C6;
+}
+
+#video_games:has(li:hover) a:not(:hover) {
+    filter: blur(4px)
+}
+
+#websites {
+    border-radius: 15px;
+    outline: 1px solid transparent;
+    transition: outline 0.3s ease;
+}
+
+#websites:hover {
+    outline: 1px solid #A8B0C6;
+}
+
+#websites:has(li:hover) a:not(:hover) {
+    filter: blur(4px)
 }

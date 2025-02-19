@@ -25,71 +25,70 @@ import figma from '../assets/figma.png';
 import mkdocs from '../assets/mkdocs.png';
 import photoshop from '../assets/photoshop.png';
 
-import img_divider from '../assets/background_divider.png';
-import placeholder from '../assets/placeholder.png';
+import placeholder from '../assets/placeholder.webm';
 
 const ticTacToe = {
 	title: "Tic-Tac-Toe (2020)",
 	description: ["Local Player vs Player", "Player vs Computer", "Achievements & skins."],
 	tags: ["Unity", "Solo", "Planning"],
-	img: placeholder
+	video: placeholder
 };
 
 const pong = {
 	title: "Pong (2020)",
 	description: ["Local Player vs Player;", "Player vs Computer;", "Multiple difficulties."],
 	tags: ["Unity", "Solo", "Planning"],
-	img: placeholder
+	video: placeholder
 };
 
 const towerDefense = {
 	title: "Tower Defense (2020)",
 	description: ["Player vs Computer;", "\"Endless waves\";", "Worker & Tower upgrades."],
 	tags: ["Unity", "Udemy", "A*pathfinding"],
-	img: placeholder
+	video: placeholder
 };
 
 const projectBoost = {
 	title: "Project Boost (2020)",
 	description: ["3D flying from A to B;", "Multiple levels progression;", "Level design."],
 	tags: ["Unity", "Udemy"],
-	img: placeholder
+	video: placeholder
 };
 
 const uaSmartSignage = {
 	title: "UA Smart Signage (2024)",
 	description: ["Centralized Digital Signage Software;", "IDP Login & Normal login;", "Digital file system;", "Dashboard with graphs;", "Log analysis;", "Template customization."],
 	tags: ["Teamwork", "Team leading", "Research", "Designing", "Frontend", "Backend", "Springboot", "React", "Figma", "InfluxDB", "SQL", "Docker", "Documentation"],
-	img: placeholder
+	video: placeholder
 };
 
 const boardgamesHub = {
 	title: "Boardgames Hub (2023)",
 	description: ["Login;", "Wishlist;", "Search with filters;", "Price charts;", "Recommendations."],
 	tags: ["Teamwork", "Planning", "Research", "Designing", "Frontend", "React", "Figma", "Docker"],
-	img: placeholder
+	video: placeholder
 };
 
 ---
 
 <Layout pageTitle="Pedro Pinho">
 	<div class="mx-auto min-h-screen max-w-screen-xl">
-		<div id="hero" class="w-full h-fit py-11 px-8 gap-8">
-			<div id="contact_about" class="w-full h-full flex flex-row">
-				<div id="contact" class="w-[40%] h-fit gap-8">
-					<div id="name" class="gap-2">
+		<div id="hero" class="w-full h-fit gap-8">
+			<div id="contact_about" class="w-full h-full py-11 px-8 gap-8 flex flex-row">
+				<div id="contact" class="flex flex-col w-[40%] h-fit">
+					<div id="name" class="flex flex-col">
 						<h1>Pedro Pinho</h1>
 						<p class="medium">bryer.pinho@outlook.com</p>
 					</div>
 					<ul id="media" class="h-fit w-fit gap-4 py-6 flex flex-row">
-						<li id="github" class="h-8 w-8">
-							<a href="https://www.github.com/pdPinho" class="hover:[#FFFFFF]">
+						<li id="github" class="h-8 w-8 scaleImg">
+							<a href="https://www.github.com/pdPinho">
 								<svg viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" transform="scale(64)" fill="#8398ED"/>
 								</svg>
 							</a>
 						</li>
-						<li id="linkedin" class="h-8 w-8">
+						<li id="linkedin" class="h-8 w-8 scaleImg">
 							<a href="https://www.linkedin.com">
 								<svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
 									<path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z" fill="#0B0D16"/>
@@ -110,81 +109,119 @@ const boardgamesHub = {
 					<p class="mb-4">When leisuring you can find me painting miniatures, reading books, playing board games, video games or even in the gym.</p>
 				</div>
 			</div>
-			<div id="skills_career" class="flex flex-row w-full h-full pt-11 pb-48">
+			<div id="skills_career" class="flex flex-row w-full h-full pt-11 pb-48 px-8 gap-8">
 				<div id="skills_tools" class="flex flex-col w-[40%] gap-11">
 					<div id="skills" class="gap-4 h-fit w-fit">
 						<h3>Skills</h3>
 						<ul class="gap-6 grid grid-cols-3 pt-4">
-							<li class="h-8 w-8">
-								<Image src={html} alt="HTML icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble z-20" data-after-content="HTML5">
+								<Image src={html} class="object-contain" alt="HTML icon"/>
 							</li>
-							<li class="h-8 w-8">
-								<Image src={css} alt="CSS icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble z-20" data-after-content="CSS3">
+								<Image src={css} class="object-contain" alt="CSS3 icon"/>
 							</li>
-							<li class="h-8 w-8">
-								<Image src={js} alt="Javascript icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble z-20" data-after-content="Javascript">
+								<Image src={js} class="object-contain" alt="Javascript icon"/>
 							</li>
-							<li class="h-8 w-8">
-								<Image src={python} alt="Python icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble z-10" data-after-content="Python">
+								<Image src={python} class="object-contain" alt="Python icon"/>
 							</li>
-							<li class="h-8 w-8">
-								<Image src={java} alt="Java icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble z-10" data-after-content="Java">
+								<Image src={java} class="object-contain" alt="Java icon"/>
 							</li>
-							<li class="h-8 w-8">
-								<Image src={bash} alt="Bash icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble z-10" data-after-content="Bash">
+								<Image src={bash} class="object-contain" alt="Bash icon"/>
 							</li>
-							<li class="h-8 w-8">
-								<Image src={csharp} alt="C Sharp icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble" data-after-content="C Sharp">
+								<Image src={csharp} class="object-contain" alt="C Sharp icon"/>
 							</li>
-							<li class="h-8 w-8">
-								<Image src={cpp} alt="C Plus Plus icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble" data-after-content="C Plus Plus">
+								<Image src={cpp} class="object-contain" alt="C Plus Plus icon"/>
 							</li>
 						</ul>
 					</div>
 					<div id="tools" class="gap-4 h-fit w-fit">
 						<h3>Tools</h3>
 						<ul class="gap-6 grid grid-cols-3 pt-4">
-							<li class="h-8 w-8">
-								<Image src={react} alt="React icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble z-30" data-after-content="React">
+								<Image src={react} class="object-contain" alt="React icon"/>
 							</li>
-							<li class="h-8 w-8">
-								<Image src={astro} alt="Astro icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble z-30" data-after-content="Astro">
+								<Image src={astro} class="object-contain" alt="Astro icon"/>
 							</li>
-							<li class="h-8 w-8">
-								<Image src={tanstackQuery} alt="Tanstack Query icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble z-30" data-after-content="Tanstack Query">
+								<Image src={tanstackQuery} class="object-contain" alt="Tanstack Query icon"/>
 							</li>
-							<li class="h-8 w-8">
-								<Image src={tailwind} alt="Tailwind CSS icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble z-20" data-after-content="Tailwind CSS">
+								<Image src={tailwind} class="object-contain" alt="Tailwind CSS icon"/>
 							</li>
-							<li class="h-8 w-8">
-									<Image src={docker} alt="docker icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble z-20" data-after-content="Docker">
+								<Image src={docker} class="object-contain" alt="Docker icon"/>
 							</li>
-							<li class="h-8 w-8">
-								<Image src={springboot} alt="SpringBoot icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble z-20" data-after-content="Spring Boot">
+								<Image src={springboot} class="object-contain" alt="Spring Boot icon"/>
 							</li>
-							<li class="h-8 w-8">
-								<Image src={linux} alt="Linux icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble z-10" data-after-content="Linux">
+								<Image src={linux} class="object-contain" alt="Linux icon"/>
 							</li>
-							<li class="h-8 w-8">
-								<Image src={git} alt="Git icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble z-10" data-after-content="Git">
+								<Image src={git} class="object-contain" alt="Git icon"/>
 							</li>
-							<li class="h-8 w-8">
-								<Image src={mkdocs} alt="MkDocs icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble z-10" data-after-content="MkDocs">
+								<Image src={mkdocs} class="object-contain" alt="MkDocs icon"/>
 							</li>
-							<li class="h-8 w-8">
-								<Image src={figma} alt="Figma icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble" data-after-content="Figma">
+								<Image src={figma} class="object-contain" alt="Figma icon"/>
 							</li>
-							<li class="h-8 w-8">
-								<Image src={photoshop} alt="Photoshop icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble" data-after-content="Photoshop">
+								<Image src={photoshop} class="object-contain" alt="Photoshop icon"/>
 							</li>
-							<li class="h-8 w-8">
-								<Image src={jira} alt="Jira icon"/>
+							<li class="flex h-8 w-8 scaleImg speech-bubble" data-after-content="Jira">
+								<Image src={jira} class="object-contain" alt="Jira icon"/>
 							</li>
 						</ul>
 					</div>
 				</div>
-				<div id="career" class="flex flex-col w-[60%]">
+				<div id="career" class="flex flex-col w-[60%] h-fit gap-3-">
 					<h3>Career path</h3>
+					<ol class="w-full h-fit flex flex-col pt-5">
+						<li class="mb-8 p-3 w-full h-fit itemCareer">
+							<div class="flex flex-row gap-2 w-full h-fit">
+								<div class="w-[20%] p-2.5 h-fit items-center font-semibold">2021 — 2024</div>
+								<div class="w-[80%] h-fit">
+									<h5>Universidade de Aveiro</h5>
+									<p>Spent 3 years earning my Bachelor's degree in Informatics Engineering/Computer Science in Portugal.</p>
+								</div>
+							</div>
+						</li>
+						<li class="mb-12 p-3 w-full h-fit itemCareer">
+							<div class="flex flex-row gap-2 w-full h-fit">
+								<div class="w-[20%] p-2.5 h-fit items-center font-semibold">2018 — 2019</div>
+								<div class="w-[80%]">
+									<h5>Instituto Emprego e Formação Profissional</h5>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mollis suscipit odio, a sollicitudin ex iaculis vitae. Donec nunc augue, pulvinar at vehicula gravida, venenatis non neque. </p>
+								</div>
+							</div>
+						</li>
+						<li class="mb-12 w-full p-3 h-fit itemCareer">
+							<div class="flex flex-row gap-2 w-full h-fit">
+								<div class="w-[20%] p-2.5 h-fit items-center font-semibold">2016 — 2017</div>
+								<div class="w-[80%]">
+									<h5>Centroproduto</h5>
+									<p>Curabitur sed lacinia mauris. Mauris eleifend malesuada est, eget luctus justo auctor nec. Phasellus ullamcorper ultrices dictum. Aenean suscipit ultricies magna sed suscipit.</p>
+								</div>
+							</div>
+						</li>
+						<li class="w-full p-3 h-fit itemCareer">
+							<div class="flex flex-row gap-2 w-full h-fit">
+								<div class="w-[20%] p-2.5 h-fit items-center font-semibold">2014 — 2016</div>
+								<div class="w-[80%]">
+									<h5>CESAE</h5>
+									<p>Nunc sed urna volutpat, tincidunt nisi quis, cursus metus. Morbi dui dolor, tempus sit amet vulputate ac, bibendum vitae velit.</p>
+								</div>
+							</div>
+						</li>
+					</ol>
 				</div>
 			</div>
 		</div>
@@ -194,20 +231,20 @@ const boardgamesHub = {
 		</div>
 		
 
-		<div id="projects" class="flex flex-col w-full h-fit py-16 px-2.5 gap-6 items-center text-center">
+		<div id="projects" class="flex flex-col w-full h-fit py-32 px-2.5 gap-6 items-center text-center">
 			<h2 class="gap-2.5 py-6 w-full h-fit">Projects</h2>
 			<div id="videogames_websites" class="flex flex-row w-full h-fit gap-2.5">
 				<div id="video_games" class="p-2.5 gap-2.5 h-fit w-[49%]">
 					<h3 class="pb-3">Video Games</h3>
 					<ul class="w-full h-fit py-3.5 px-3 gap-2.5 text-left">
-						<Content object={ticTacToe} last={false} isWebsite={false}/>
+						<Content object={ticTacToe} last={false} isWebsite={false} link="google.com"/>
 						<Content object={pong} last={false} isWebsite={false}/>
 						<Content object={towerDefense} last={false} isWebsite={false}/>
 						<Content object={projectBoost} last={true} isWebsite={false}/>
 					</ul>
 				</div>
 				<div id="videogames_websites_divider" class="border-1 border-solid border-[#A8B0C6] mt-4"/>
-				<div id="websites" class="p-10 gap-2.5 h-fit w-[49%]">
+				<div id="websites" class="p-2.5 gap-2.5 h-fit w-[49%]">
 					<h3 class="pb-3">Websites</h3>
 					<ul class="w-full h-fit py-3.5 px-3 gap-2.5 text-left">
 						<Content object={uaSmartSignage} last={false} isWebsite={true}/>
@@ -219,10 +256,10 @@ const boardgamesHub = {
 	
 		<div></div>
 	
-		<div id="currentWork" class="flex flex-col w-full h-fit py-16 px-2.5 gap-3.5 items-center text-center">
+		<div id="currentWork" class="flex flex-col w-full h-fit py-32 px-2.5 gap-3.5 items-center text-center">
 			<h2 class="py-10 w-full">Currently working on</h2>
 			<div class="flex flex-row w-full h-fit gap-3.5 px-10 pb-10">
-				<div class="flex flex-col rounded-md border-1 border-[#A8B0C6] w-[50%] pb-10 pt-2">
+				<div class="flex flex-col rounded-md outline-1 outline-[#A8B0C6] w-[50%] pb-10 pt-2">
 					<h3>Dark Souls 2 Mod</h3><h5>Archipelago Randomizer</h5>
 					<ul class="w-full h-fit py-10 px-10 gap-2.5 text-left">
 						<li class="list-disc list-inside">Archipelago Randomizer mod for DS2;</li>
@@ -232,7 +269,7 @@ const boardgamesHub = {
 						<li class="list-disc list-inside">Creating client to connect with Archipelago.</li>
 					</ul>
 				</div>
-				<div class="flex flex-col rounded-md border-1 border-[#A8B0C6] w-[50%] pb-10 pt-2">
+				<div class="flex flex-col rounded-md outline-1 outline-[#A8B0C6] w-[50%] pb-10 pt-2">
 					<h3>Entertainment Tracker</h3><h5>Sharing website</h5>
 					<ul class="w-full h-fit py-10 px-10 gap-2.5 text-left">
 						<li class="list-disc list-inside">Simple website to create various lists;</li>
