@@ -1,32 +1,105 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Content from '../components/Content.astro';
+import { Image } from 'astro:assets';
+
+import docker from '../assets/docker.webp';
+import python from '../assets/python.webp';
+import js from '../assets/js.png';
+import html from '../assets/html.png';
+import css from '../assets/css.webp';
+import java from '../assets/java.webp';
+import bash from '../assets/bash.png';
+import csharp from '../assets/csharp.png';
+import cpp from '../assets/cpp.png';
+import react from '../assets/react.png';
+import astro from '../assets/astro.png';
+import tanstackQuery from '../assets/tanstack_query.png';
+import tailwind from '../assets/tailwind.png';
+import springboot from '../assets/springboot.png';
+import linux from '../assets/linux.png';
+import git from '../assets/git.png';
+import jira from '../assets/jira.png';
+import figma from '../assets/figma.png';
+
+import mkdocs from '../assets/mkdocs.png';
+import photoshop from '../assets/photoshop.png';
+
+import img_divider from '../assets/background_divider.png';
+import placeholder from '../assets/placeholder.png';
+
+const ticTacToe = {
+	title: "Tic-Tac-Toe (2020)",
+	description: ["Local Player vs Player", "Player vs Computer", "Achievements & skins."],
+	tags: ["Unity", "Solo", "Planning"],
+	img: placeholder
+};
+
+const pong = {
+	title: "Pong (2020)",
+	description: ["Local Player vs Player;", "Player vs Computer;", "Multiple difficulties."],
+	tags: ["Unity", "Solo", "Planning"],
+	img: placeholder
+};
+
+const towerDefense = {
+	title: "Tower Defense (2020)",
+	description: ["Player vs Computer;", "\"Endless waves\";", "Worker & Tower upgrades."],
+	tags: ["Unity", "Udemy", "A*pathfinding"],
+	img: placeholder
+};
+
+const projectBoost = {
+	title: "Project Boost (2020)",
+	description: ["3D flying from A to B;", "Multiple levels progression;", "Level design."],
+	tags: ["Unity", "Udemy"],
+	img: placeholder
+};
+
+const uaSmartSignage = {
+	title: "UA Smart Signage (2024)",
+	description: ["Centralized Digital Signage Software;", "IDP Login & Normal login;", "Digital file system;", "Dashboard with graphs;", "Log analysis;", "Template customization."],
+	tags: ["Teamwork", "Team leading", "Research", "Designing", "Frontend", "Backend", "Springboot", "React", "Figma", "InfluxDB", "SQL", "Docker", "Documentation"],
+	img: placeholder
+};
+
+const boardgamesHub = {
+	title: "Boardgames Hub (2023)",
+	description: ["Login;", "Wishlist;", "Search with filters;", "Price charts;", "Recommendations."],
+	tags: ["Teamwork", "Planning", "Research", "Designing", "Frontend", "React", "Figma", "Docker"],
+	img: placeholder
+};
+
 ---
 
 <Layout pageTitle="Pedro Pinho">
 	<div class="mx-auto min-h-screen max-w-screen-xl">
-		<div id="hero" class="w-full h-fit py-11 px-8 gap-8 flex flex-row">
+		<div id="hero" class="w-full h-fit py-11 px-8 gap-8">
 			<div id="contact_about" class="w-full h-full flex flex-row">
 				<div id="contact" class="w-[40%] h-fit gap-8">
 					<div id="name" class="gap-2">
 						<h1>Pedro Pinho</h1>
 						<p class="medium">bryer.pinho@outlook.com</p>
 					</div>
-					<ul id="media" class="h-fit w-fit gap-4 flex flex-row">
+					<ul id="media" class="h-fit w-fit gap-4 py-6 flex flex-row">
 						<li id="github" class="h-8 w-8">
-							<a class="hover:[#FFFFFF]">
+							<a href="https://www.github.com/pdPinho" class="hover:[#FFFFFF]">
 								<svg viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" transform="scale(64)" fill="#8398ED"/>
 								</svg>
 							</a>
 						</li>
 						<li id="linkedin" class="h-8 w-8">
-							<a>
-								<img src="placeholder.png"/>	
+							<a href="https://www.linkedin.com">
+								<svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+									<path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z" fill="#0B0D16"/>
+									<path d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z" fill="#8398ED"/>
+								</svg>
 							</a>
 						</li>
 					</ul>
-					<div id="description">
-						<span class="medium">Software engineer;<br></span>
+					<div id="description" class="flex flex-col">
+						<span class="medium">Software engineer;</span>
 						<span class="medium">Full stack developer.</span>						
 					</div>
 				</div>
@@ -37,26 +110,137 @@ import Layout from '../layouts/Layout.astro';
 					<p class="mb-4">When leisuring you can find me painting miniatures, reading books, playing board games, video games or even in the gym.</p>
 				</div>
 			</div>
-			<div>
-				<div id="skills">
-	
+			<div id="skills_career" class="flex flex-row w-full h-full pt-11 pb-48">
+				<div id="skills_tools" class="flex flex-col w-[40%] gap-11">
+					<div id="skills" class="gap-4 h-fit w-fit">
+						<h3>Skills</h3>
+						<ul class="gap-6 grid grid-cols-3 pt-4">
+							<li class="h-8 w-8">
+								<Image src={html} alt="HTML icon"/>
+							</li>
+							<li class="h-8 w-8">
+								<Image src={css} alt="CSS icon"/>
+							</li>
+							<li class="h-8 w-8">
+								<Image src={js} alt="Javascript icon"/>
+							</li>
+							<li class="h-8 w-8">
+								<Image src={python} alt="Python icon"/>
+							</li>
+							<li class="h-8 w-8">
+								<Image src={java} alt="Java icon"/>
+							</li>
+							<li class="h-8 w-8">
+								<Image src={bash} alt="Bash icon"/>
+							</li>
+							<li class="h-8 w-8">
+								<Image src={csharp} alt="C Sharp icon"/>
+							</li>
+							<li class="h-8 w-8">
+								<Image src={cpp} alt="C Plus Plus icon"/>
+							</li>
+						</ul>
+					</div>
+					<div id="tools" class="gap-4 h-fit w-fit">
+						<h3>Tools</h3>
+						<ul class="gap-6 grid grid-cols-3 pt-4">
+							<li class="h-8 w-8">
+								<Image src={react} alt="React icon"/>
+							</li>
+							<li class="h-8 w-8">
+								<Image src={astro} alt="Astro icon"/>
+							</li>
+							<li class="h-8 w-8">
+								<Image src={tanstackQuery} alt="Tanstack Query icon"/>
+							</li>
+							<li class="h-8 w-8">
+								<Image src={tailwind} alt="Tailwind CSS icon"/>
+							</li>
+							<li class="h-8 w-8">
+									<Image src={docker} alt="docker icon"/>
+							</li>
+							<li class="h-8 w-8">
+								<Image src={springboot} alt="SpringBoot icon"/>
+							</li>
+							<li class="h-8 w-8">
+								<Image src={linux} alt="Linux icon"/>
+							</li>
+							<li class="h-8 w-8">
+								<Image src={git} alt="Git icon"/>
+							</li>
+							<li class="h-8 w-8">
+								<Image src={mkdocs} alt="MkDocs icon"/>
+							</li>
+							<li class="h-8 w-8">
+								<Image src={figma} alt="Figma icon"/>
+							</li>
+							<li class="h-8 w-8">
+								<Image src={photoshop} alt="Photoshop icon"/>
+							</li>
+							<li class="h-8 w-8">
+								<Image src={jira} alt="Jira icon"/>
+							</li>
+						</ul>
+					</div>
 				</div>
-				<div id="career">
+				<div id="career" class="flex flex-col w-[60%]">
+					<h3>Career path</h3>
+				</div>
+			</div>
+		</div>
+	
+		<div>
+			
+		</div>
 		
+
+		<div id="projects" class="flex flex-col w-full h-fit py-16 px-2.5 gap-6 items-center text-center">
+			<h2 class="gap-2.5 py-6 w-full h-fit">Projects</h2>
+			<div id="videogames_websites" class="flex flex-row w-full h-fit gap-2.5">
+				<div id="video_games" class="p-2.5 gap-2.5 h-fit w-[49%]">
+					<h3 class="pb-3">Video Games</h3>
+					<ul class="w-full h-fit py-3.5 px-3 gap-2.5 text-left">
+						<Content object={ticTacToe} last={false} isWebsite={false}/>
+						<Content object={pong} last={false} isWebsite={false}/>
+						<Content object={towerDefense} last={false} isWebsite={false}/>
+						<Content object={projectBoost} last={true} isWebsite={false}/>
+					</ul>
+				</div>
+				<div id="videogames_websites_divider" class="border-1 border-solid border-[#A8B0C6] mt-4"/>
+				<div id="websites" class="p-10 gap-2.5 h-fit w-[49%]">
+					<h3 class="pb-3">Websites</h3>
+					<ul class="w-full h-fit py-3.5 px-3 gap-2.5 text-left">
+						<Content object={uaSmartSignage} last={false} isWebsite={true}/>
+						<Content object={boardgamesHub} last={true} isWebsite={true}/>
+					</ul>
 				</div>
 			</div>
 		</div>
 	
 		<div></div>
 	
-		<div id="projects">
-	
-		</div>
-	
-		<div></div>
-	
-		<div id="currentWork">
-	
+		<div id="currentWork" class="flex flex-col w-full h-fit py-16 px-2.5 gap-3.5 items-center text-center">
+			<h2 class="py-10 w-full">Currently working on</h2>
+			<div class="flex flex-row w-full h-fit gap-3.5 px-10 pb-10">
+				<div class="flex flex-col rounded-md border-1 border-[#A8B0C6] w-[50%] pb-10 pt-2">
+					<h3>Dark Souls 2 Mod</h3><h5>Archipelago Randomizer</h5>
+					<ul class="w-full h-fit py-10 px-10 gap-2.5 text-left">
+						<li class="list-disc list-inside">Archipelago Randomizer mod for DS2;</li>
+						<li class="list-disc list-inside">Randomize items based on location pickups;</li>
+						<li class="list-disc list-inside">CheatEngine research for memory addresses;</li>
+						<li class="list-disc list-inside">Reverse engineering with assembly;</li>
+						<li class="list-disc list-inside">Creating client to connect with Archipelago.</li>
+					</ul>
+				</div>
+				<div class="flex flex-col rounded-md border-1 border-[#A8B0C6] w-[50%] pb-10 pt-2">
+					<h3>Entertainment Tracker</h3><h5>Sharing website</h5>
+					<ul class="w-full h-fit py-10 px-10 gap-2.5 text-left">
+						<li class="list-disc list-inside">Simple website to create various lists;</li>
+						<li class="list-disc list-inside">Centralized place to have games, movies, etc;</li>
+						<li class="list-disc list-inside">Cache information and use it for statistics.</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 </Layout>

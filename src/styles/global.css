@@ -1,14 +1,5 @@
 @import "tailwindcss";
 
-h1, h2, h3 {
-    color: #A8B0C6;
-}
-
-.medium {
-    font-size: 1.2rem;
-    line-height: 27.88px;
-}
-
 @layer base {  
     html {
         font-size: 16px;
@@ -31,4 +22,27 @@ h1, h2, h3 {
     h4 {  font-size: 1.728rem;  }
     h5 {  font-size: 1.44rem;   }
     h6 {  font-size: 1.2rem;    }
+}
+
+@media screen and (max-width: 500px){
+    #contact_about {
+        flex-direction: column;
+    }
+}
+
+h1, h2, h3 {
+    color: #A8B0C6;
+}
+
+.medium {
+    font-size: 1.44rem;
+    line-height: 27.88px;
+}
+
+#projects h3 {
+    color: #A2A372;
+}
+
+#currentWork h3, h4, h5, h6 {
+    color: #A2A372;
 }
