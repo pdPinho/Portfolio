@@ -1,11 +1,16 @@
 ---
-const { object, last, isWebsite, link } = Astro.props;
+const { object, last, isWebsite } = Astro.props;
 ---
-<a href={link}>
-    <li class="flex flex-row h-fit content" onmouseover="this.querySelector('.contentImage').play()"
+<a href={object.url}>
+    <li class="flex flex-wrap h-fit content" onmouseover="this.querySelector('.contentImage').play()"
     onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0;">
-        <div class=`${!isWebsite ? "w-[50%]" : "w-[60%]"} h-fit p-2.5 gap-2.5 flex flex-col`>
-            <p class="medium">{object.title}</p>
+        <div class=`${isWebsite ? "w-[55%]" : "w-[50%]"} h-fit p-2.5 gap-2.5 flex flex-col`>
+            <p class="medium font-medium">{object.title}</p>
+            {isWebsite ?
+                <p class="text-[#A2A372]">{object.job}</p>
+            :
+            ""
+            }
             <ul class="flex flex-col">
                 {object.description.map((description: unknown) =>
                 <li class="list-disc list-inside">{description}</li>
@@ -21,23 +26,21 @@ const { object, last, isWebsite, link } = Astro.props;
             ""
             }
         </div>
-        <div class=`p-2.5 pb-0 gap-2.5 ${!isWebsite ? "w-[50%]" : "w-[40%]"} max-h-40`>
-            <video class=`mx-auto rounded-sm ${!isWebsite ? "max-w-56" : "max-w-52"} h-full contentImage`>
+        <div class=`p-2.5 gap-2.5 ${isWebsite ? "w-[45%]" : "w-[50%]"} flex`>
+            <video class=`rounded-sm h-full contentImage`>
                 <source src={object.video} />
             </video>
         </div>
+        {isWebsite ?
+            <ul class="flex flex-wrap px-3 gap-2.5">
+                {object.tags.map((tag: unknown) => 
+                <li class="rounded-sm w-fit h-fit text-[#1F0F1F] bg-[#A8B0C6] px-1.5 font-medium">{tag}</li>
+                )}
+            </ul>
+            :
+            ""
+            }
     </li>
-    
-    {isWebsite ?
-    <ul class="flex flex-wrap px-3 gap-2.5">
-        {object.tags.map((tag: unknown) => 
-        <li class="rounded-sm w-fit h-fit text-[#1F0F1F] bg-[#A8B0C6] px-1.5 font-medium">{tag}</li>
-        )}
-    </ul>
-    :
-    ""
-    }
-    
     
     {!last ? 
     <div class="py-4">

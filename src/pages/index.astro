@@ -31,42 +31,50 @@ const ticTacToe = {
 	title: "Tic-Tac-Toe (2020)",
 	description: ["Local Player vs Player", "Player vs Computer", "Achievements & skins."],
 	tags: ["Unity", "Solo", "Planning"],
-	video: placeholder
+	video: placeholder,
+	url: ""
 };
 
 const pong = {
 	title: "Pong (2020)",
 	description: ["Local Player vs Player;", "Player vs Computer;", "Multiple difficulties."],
 	tags: ["Unity", "Solo", "Planning"],
-	video: placeholder
+	video: placeholder,
+	url: ""
 };
 
 const towerDefense = {
 	title: "Tower Defense (2020)",
 	description: ["Player vs Computer;", "\"Endless waves\";", "Worker & Tower upgrades."],
-	tags: ["Unity", "Udemy", "A*pathfinding"],
-	video: placeholder
+	tags: ["Unity", "Udemy"],
+	video: placeholder,
+	url: ""
 };
 
 const projectBoost = {
 	title: "Project Boost (2020)",
 	description: ["3D flying from A to B;", "Multiple levels progression;", "Level design."],
 	tags: ["Unity", "Udemy"],
-	video: placeholder
+	video: placeholder,
+	url: ""
 };
 
 const uaSmartSignage = {
 	title: "UA Smart Signage (2024)",
-	description: ["Centralized Digital Signage Software;", "IDP Login & Normal login;", "Digital file system;", "Dashboard with graphs;", "Log analysis;", "Template customization."],
-	tags: ["Teamwork", "Team leading", "Research", "Designing", "Frontend", "Backend", "Springboot", "React", "Figma", "InfluxDB", "SQL", "Docker", "Documentation"],
-	video: placeholder
+	job: "Team manager & Developer",
+	description: ["Centralized Digital Signage;", "IDP Login & Normal login;", "Digital file system;", "Dashboard & log analysis;", "Template customization."],
+	tags: ["React", "TailwindCSS", "Java", "SQL", "Docker"],
+	video: placeholder,
+	url: ""
 };
 
 const boardgamesHub = {
 	title: "Boardgames Hub (2023)",
+	job: "Frontend developer",
 	description: ["Login;", "Wishlist;", "Search with filters;", "Price charts;", "Recommendations."],
-	tags: ["Teamwork", "Planning", "Research", "Designing", "Frontend", "React", "Figma", "Docker"],
-	video: placeholder
+	tags: ["React", "Docker"],
+	video: placeholder,
+	url: ""
 };
 
 ---
@@ -104,7 +112,7 @@ const boardgamesHub = {
 				</div>
 				<div id="about" class="w-[60%] h-fit gap-4">
 					<h2>About me</h2>
-					<p class="mb-4">Developer with high attention to detail, mindful of time management, open-minded, team working, adaptable and learning new things every day.</p>
+					<p class="mb-4">Developer with high attention to detail, mindful of time management, open-minded, team working, adaptable and excited to learn new things every day.</p>
 					<p class="mb-4">I am always fascinated with good UX, beautiful visuals and smooth transitions.</p>
 					<p class="mb-4">When leisuring you can find me painting miniatures, reading books, playing board games, video games or even in the gym.</p>
 				</div>
@@ -190,7 +198,7 @@ const boardgamesHub = {
 								<div class="w-[20%] p-2.5 h-fit items-center font-semibold">2021 — 2024</div>
 								<div class="w-[80%] h-fit">
 									<h5>Universidade de Aveiro</h5>
-									<p>Spent 3 years earning my Bachelor's degree in Informatics Engineering/Computer Science in Portugal.</p>
+									<p>Bachelor's Degree in Informatics Engineering/Computer Science</p>
 								</div>
 							</div>
 						</li>
@@ -199,7 +207,7 @@ const boardgamesHub = {
 								<div class="w-[20%] p-2.5 h-fit items-center font-semibold">2018 — 2019</div>
 								<div class="w-[80%]">
 									<h5>Instituto Emprego e Formação Profissional</h5>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mollis suscipit odio, a sollicitudin ex iaculis vitae. Donec nunc augue, pulvinar at vehicula gravida, venenatis non neque. </p>
+									<p>Marketing Course and Internship</p>
 								</div>
 							</div>
 						</li>
@@ -208,7 +216,7 @@ const boardgamesHub = {
 								<div class="w-[20%] p-2.5 h-fit items-center font-semibold">2016 — 2017</div>
 								<div class="w-[80%]">
 									<h5>Centroproduto</h5>
-									<p>Curabitur sed lacinia mauris. Mauris eleifend malesuada est, eget luctus justo auctor nec. Phasellus ullamcorper ultrices dictum. Aenean suscipit ultricies magna sed suscipit.</p>
+									<p>Video and Image Editing Specialist. Nine-month professional internship at a start-up.</p>
 								</div>
 							</div>
 						</li>
@@ -217,7 +225,7 @@ const boardgamesHub = {
 								<div class="w-[20%] p-2.5 h-fit items-center font-semibold">2014 — 2016</div>
 								<div class="w-[80%]">
 									<h5>CESAE</h5>
-									<p>Nunc sed urna volutpat, tincidunt nisi quis, cursus metus. Morbi dui dolor, tempus sit amet vulputate ac, bibendum vitae velit.</p>
+									<p>Spent nearly three years completing my final educational qualifications.</p>
 								</div>
 							</div>
 						</li>
@@ -225,11 +233,8 @@ const boardgamesHub = {
 				</div>
 			</div>
 		</div>
-	
-		<div>
-			
-		</div>
 		
+
 
 		<div id="projects" class="flex flex-col w-full h-fit py-32 px-2.5 gap-6 items-center text-center">
 			<h2 class="gap-2.5 py-6 w-full h-fit">Projects</h2>
@@ -237,7 +242,7 @@ const boardgamesHub = {
 				<div id="video_games" class="p-2.5 gap-2.5 h-fit w-[49%]">
 					<h3 class="pb-3">Video Games</h3>
 					<ul class="w-full h-fit py-3.5 px-3 gap-2.5 text-left">
-						<Content object={ticTacToe} last={false} isWebsite={false} link="google.com"/>
+						<Content object={ticTacToe} last={false} isWebsite={false}/>
 						<Content object={pong} last={false} isWebsite={false}/>
 						<Content object={towerDefense} last={false} isWebsite={false}/>
 						<Content object={projectBoost} last={true} isWebsite={false}/>
@@ -254,14 +259,14 @@ const boardgamesHub = {
 			</div>
 		</div>
 	
-		<div></div>
-	
+
+		
 		<div id="currentWork" class="flex flex-col w-full h-fit py-32 px-2.5 gap-3.5 items-center text-center">
 			<h2 class="py-10 w-full">Currently working on</h2>
 			<div class="flex flex-row w-full h-fit gap-3.5 px-10 pb-10">
-				<div class="flex flex-col rounded-md outline-1 outline-[#A8B0C6] w-[50%] pb-10 pt-2">
+				<div class="flex flex-col rounded-md outline-1 outline-[#A8B0C6] w-[50%] p-6">
 					<h3>Dark Souls 2 Mod</h3><h5>Archipelago Randomizer</h5>
-					<ul class="w-full h-fit py-10 px-10 gap-2.5 text-left">
+					<ul class="w-full h-fit py-10 px-10 space-y-2 gap-2.5 text-left">
 						<li class="list-disc list-inside">Archipelago Randomizer mod for DS2;</li>
 						<li class="list-disc list-inside">Randomize items based on location pickups;</li>
 						<li class="list-disc list-inside">CheatEngine research for memory addresses;</li>
@@ -269,9 +274,9 @@ const boardgamesHub = {
 						<li class="list-disc list-inside">Creating client to connect with Archipelago.</li>
 					</ul>
 				</div>
-				<div class="flex flex-col rounded-md outline-1 outline-[#A8B0C6] w-[50%] pb-10 pt-2">
+				<div class="flex flex-col rounded-md outline-1 outline-[#A8B0C6] w-[50%] p-6">
 					<h3>Entertainment Tracker</h3><h5>Sharing website</h5>
-					<ul class="w-full h-fit py-10 px-10 gap-2.5 text-left">
+					<ul class="w-full h-fit py-10 px-10 space-y-2 gap-2.5 text-left">
 						<li class="list-disc list-inside">Simple website to create various lists;</li>
 						<li class="list-disc list-inside">Centralized place to have games, movies, etc;</li>
 						<li class="list-disc list-inside">Cache information and use it for statistics.</li>
