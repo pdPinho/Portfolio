@@ -1,0 +1,287 @@
+---
+
+import Layout from "../layouts/Layout.astro";
+
+import html from '../assets/html.png';
+import css from '../assets/css.webp';
+import javascript from '../assets/js.png';
+import java from '../assets/java.webp';
+import python from '../assets/python.webp';
+
+import react from '../assets/react.png';
+import springboot from '../assets/springboot.png';
+import postgresSQL from '../assets/postgresql.svg';
+import kafka from '../assets/kakfa.png';
+import docker from '../assets/docker.webp';
+import tailwind from '../assets/tailwind.png';
+import motionframer from '../assets/framer-motion.svg';
+import zustand from '../assets/zustand.svg';
+
+import ProjectHero from "../components/ProjectHero.astro";
+
+import landingVideo from '../assets/videos/bgh_landing.webm';
+import productVideo from '../assets/videos/bgh_product.webm';
+import publisherVideo from '../assets/videos/bgh_publisher.webm';
+import searchVideo from '../assets/videos/bgh_search.webm';
+import wishlistVideo from '../assets/videos/bgh_wishlist.webm';
+import recommendationsVideo from '../assets/videos/bgh_recommendations.webm';
+import adminVideo from '../assets/videos/bgh_admin.webm';
+
+const githubLink = "https://www.github.com/pdPinho/BoardGamesHub ";
+
+const languages = [
+    {
+        text: "HTML",
+        img: html,
+        alt: "HTML icon"
+    },
+    {
+        text: "CSS",
+        img: css,
+        alt: "CSS icon"
+    },    
+    {
+        text: "Javascript",
+        img: javascript,
+        alt: "Javascript icon"
+    },
+    {
+        text: "Java",
+        img: java,
+        alt: "Java icon"
+    },
+    {
+        text: "Python",
+        img: python,
+        alt: "Python icon"
+    }
+]
+
+const tools = [
+    {
+        text: "React",
+        img: react,
+        alt: "React icon"
+    },
+    {
+        text: "Springboot",
+        img: springboot,
+        alt: "Springboot icon"
+    },
+    {
+        text: "PostgresSQL",
+        img: postgresSQL,
+        alt: "PostgresSQL icon"
+    },
+    {
+        text: "Docker",
+        img: docker,
+        alt: "Docker icon"
+    },
+    {
+        text: "TailwindCSS",
+        img: tailwind,
+        alt: "TailwindCSS icon"
+    },
+    {
+        text: "Motion Framer",
+        img: motionframer,
+        alt: "Motion Framer icon"
+    },
+    {
+        text: "Zustand",
+        img: zustand,
+        alt: "Zustand icon"
+    },
+    {
+        text: "Kafka",
+        img: kafka,
+        alt: "Kafka icon"
+    },
+]
+
+const softSkills = [
+    "Research",
+    "Planning",
+    "Designing",
+    "Time management",
+    "Creativity",
+    "Critical thinking",
+    "Problem solving"
+]
+
+const about = [
+    "In my second year of university, I, alongside a team of three other students, created a board game price comparison website.",
+    "We had three months to complete the project (alongside other university work), and were responsible for planning, designing and assigning roles/responsibilities within our team.",
+    "My role was to design and implement the front end of the website alongside another team member using Figma and React.",
+]
+
+const challenges = [
+    "This was my first time working with React, and I needed to learn on-the-go throughout the project. I leveraged the React documentation as much as possible to come down the learning curve fast enough and meet the deadline.",
+]
+
+---
+<Layout pageTitle="Boardgames Hub">
+    <div class="mx-auto min-h-screen max-w-screen-xl">
+		<ProjectHero title="Boardgames Hub"
+                    githubLink={githubLink} languages={languages} 
+                    tools={tools} softSkills={softSkills}
+                    about={about} challenges={challenges} noURL={true}/>
+        <div id="features" class="w-full h-fit">
+            <div class="flex flex-col w-full py-16 px-14 sm:px-8 gap-14">
+                <div class="flex mx-auto py-6 featureTitleSmallScreen">
+                    <h2>Features</h2>
+                </div>
+                <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" onmouseover="this.querySelector('.contentImage').play()"
+                onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0">
+                    <div class="flex flex-row w-full h-fit px-8 featureTitleSmallScreen">
+                        <h3 class="px-8 featureTitleSmallScreen">Landing Page</h3>
+                    </div>
+                    <div class="flex flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
+                        <div class="flex flex-col gap-4 w-[50%] p-12 sm:p-8 featureTextSmallScreen">
+                            <p>When first interacting with the website, the user will find the <span class="text-[#A2A372]">current most popular board game</span> on the front page. Popularity is based on the average clicks in the past 7 days.</p>
+                            <p>The landing page also contains:</p>
+                            <ul>
+                                <li class="list-disc list-inside">Existing <span class="text-[#A2A372]">categories</span> within the database;</li>
+                                <li class="list-disc list-inside">Lists of <span class="text-[#A2A372]">popular</span> and <span class="text-[#A2A372]">new</span> board games.</li>
+                            </ul>
+                        </div>
+                        <div class="flex w-[50%] h-full m-auto featureVideoSmallScreen">
+                            <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" onmouseleave="this.classList.remove('scaleVideo');">
+                                <source src={landingVideo} type="video/webm"/>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" onmouseover="this.querySelector('.contentImage').play()"
+                onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0">
+                    
+                    <div class="flex flex-row w-full h-fit px-8 justify-end featureTitleSmallScreen">
+                        <h3 class="px-8 featureTitleSmallScreen">Product Page</h3>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
+                        <div class="flex flex-col gap-4 w-full sm:w-[50%] p-0 sm:p-8">
+                            <p>This page contains:</p>
+                            <ul>
+                                <li class="list-disc list-inside">Description and relevant information about the selected board game.</li>
+                                <li class="list-disc list-inside">A comparison of shop prices with previous prices shown on a graph.</li>
+                            </ul>
+                        </div>
+                
+                        <div class="flex w-full sm:w-[50%] h-full m-auto featureTextSmallScreen order-last sm:order-first">
+                            <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" 
+                                onmouseleave="this.classList.remove('scaleVideo');">
+                                <source src={productVideo} type="video/webm"/>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" onmouseover="this.querySelector('.contentImage').play()"
+                onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0">
+                    <div class="flex flex-row w-full h-fit px-8 featureTitleSmallScreen">
+                        <h3 class="px-8 featureTitleSmallScreen">Publisher Page</h3>
+                    </div>
+                    <div class="flex flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
+                        <div class="flex flex-col gap-4 w-[50%] p-8 featureTextSmallScreen">
+                            <p>Each game publisher has a page of its own. These pages are automatic and grab their <span class="text-[#A2A372]">current most popular games</span>  on BoardgamesHub and sets it as their <span class="text-[#A2A372]">background</span> for a more customized experience.</p>
+                            <p>On this page the user can find both the publisher's most popular titles as well as their newest titles.</p>
+                        </div>
+                        <div class="flex w-[50%] h-full m-auto featureVideoSmallScreen">
+                            <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" onmouseleave="this.classList.remove('scaleVideo');">
+                                <source src={publisherVideo} type="video/webm"/>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" onmouseover="this.querySelector('.contentImage').play()"
+                onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0">
+                    <div class="flex flex-row w-full h-fit px-8 justify-end featureTitleSmallScreen">
+                        <h3 class="px-8 featureTitleSmallScreen">Search Page</h3>
+                    </div>
+                    <div class="flex flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
+                        <div class="flex flex-col gap-4 w-[50%] p-8 featureTextSmallScreen">
+                            <p>When searching for a board game, the user can either choose to be shown a list of games or:</p>
+                            <ul>
+                                <li class="list-disc list-inside"><span class="text-[#A2A372]">Filter</span> by multiple fields;</span></li>
+                                <li class="list-disc list-inside"><span class="text-[#A2A372]">Sort</span> by desired field.</li>
+                            </ul>
+                        </div>
+                        <div class="flex w-full sm:w-[50%] h-full m-auto featureTextSmallScreen order-last sm:order-first">
+                            <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" 
+                                onmouseleave="this.classList.remove('scaleVideo');">
+                                <source src={searchVideo} type="video/webm"/>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" onmouseover="this.querySelector('.contentImage').play()"
+                onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0">
+                    <div class="flex flex-row w-full h-fit px-8 featureTitleSmallScreen">
+                        <h3 class="px-8 featureTitleSmallScreen">User & Wishlist</h3>
+                    </div>
+                    <div class="flex flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
+                        <div class="flex flex-col gap-4 w-[50%] p-8 featureTextSmallScreen">
+                            <p>Users may <span class="text-[#A2A372]">register</span> and <span class="text-[#A2A372]">sign in</span> using their email and password. Creating an account has the following benefits:</p>
+                            <ul>
+                                <li class="list-disc list-inside">Access to <span class="text-[#A2A372]">wishlist</span> to track your favourite games easily;</li>
+                                <li class="list-disc list-inside">Access to <span class="text-[#A2A372]">categories</span> for recommendations.</li>
+                            </ul>
+                            <p>Users may update and reorder their wishlist at will.</p>
+                            <p>The ultimate intention of adding the wishlist feature was to implement automatic emails with "new lowest price available" (not added in this project).</p>
+                        </div>
+                        <div class="flex w-[50%] h-full m-auto featureVideoSmallScreen">
+                            <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" onmouseleave="this.classList.remove('scaleVideo');">
+                                <source src={wishlistVideo} type="video/webm"/>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" onmouseover="this.querySelector('.contentImage').play()"
+                onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0">
+                    <div class="flex flex-row w-full h-fit px-8 justify-end featureTitleSmallScreen">
+                        <h3 class="px-8 featureTitleSmallScreen">Recommendations</h3>
+                    </div>
+                    <div class="flex flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
+                        <div class="flex flex-col gap-4 w-[50%] p-8 featureTextSmallScreen">
+                            <p>Users can select which <span class="text-[#A2A372]">categories</span> they are most interested in. The website will make recommendations based upon user choices.</p>
+                            <p>Recommendations are shown in the <span class="text-[#A2A372]">landing page</span> with some random examples matching the user preferred categories.</p>
+                        </div>
+                        <div class="flex w-full sm:w-[50%] h-full m-auto featureTextSmallScreen order-last sm:order-first">
+                            <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" 
+                                onmouseleave="this.classList.remove('scaleVideo');">
+                                <source src={recommendationsVideo} type="video/webm"/>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" onmouseover="this.querySelector('.contentImage').play()"
+                onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0">
+                    <div class="flex flex-row w-full h-fit px-8 featureTitleSmallScreen">
+                        <h3 class="px-8 featureTitleSmallScreen">Admin</h3>
+                    </div>
+                    <div class="flex flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
+                        <div class="flex flex-col gap-4 w-[50%] p-8 featureTextSmallScreen">
+                            <p>To make it easy for an admin to edit the database, there is an admin section of the website which has access to tools which enable:</p>
+                            <ul>
+                                <li class="list-disc list-inside"><span class="text-[#A2A372]">Creation</span> of new board games;</li>
+                                <li class="list-disc list-inside"><span class="text-[#A2A372]">Deletion</span> of existing board games.</li>
+                            </ul>
+                        </div>
+                        <div class="flex w-[50%] h-full m-auto featureVideoSmallScreen">
+                            <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" onmouseleave="this.classList.remove('scaleVideo');">
+                                <source src={adminVideo} type="video/webm"/>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    <script type="module">
+        import { handleAutoplay } from "/src/scripts/autoplay.js";
+        handleAutoplay();
+    </script>
+</Layout>

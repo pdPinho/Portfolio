@@ -1,0 +1,113 @@
+---
+
+import Layout from "../layouts/Layout.astro";
+
+import csharp from '../assets/csharp.png';
+import unity from '../assets/unity.png';
+import ProjectHero from "../components/ProjectHero.astro";
+
+const url = "https://drive.google.com/file/d/1taTBtU2pNJvtx1Eb0zYbwFLVhjpdngoG/view";
+const githubLink = "https://www.github.com/pdPinho/Tower-Defense-Game";
+
+const languages = [
+    {
+        text: "C Sharp",
+        img: csharp,
+        alt: "C Sharp icon"
+    }
+]
+
+const tools = [
+    {
+        text: "Unity",
+        img: unity,
+        alt: "Unity icon"
+    }
+]
+
+const softSkills = [
+    "Creativity",
+    "Problem Solving"
+]
+
+const about = [
+    "This was my fourth game ever created following a Udemy's C# Introduction to Unity.",
+    "This game's core gameloop is to defeat as many enemies as possible until you are overwhelmed with forces.",
+    "Strategy helps reaching new highscores, such as planning when to build towers or workers, and when to upgrade them."
+]
+
+const challenges = [
+    "Creating the workers logic to mine resources required some brainstorm to decide how to do it.",
+    "Deciding how to create enemies and balance them alongside endless waves made it harsh for a beginner to come up with something somewhat doable.",
+    "With these things in mind, the game's performance is actually embarrassing due to my lack of knowledge back then, however I still feel quite proud that I managed to do this without help."
+]
+
+---
+<Layout pageTitle="Tower Defense">
+    <div class="mx-auto min-h-screen max-w-screen-xl">
+		<ProjectHero title="Tower Defense" projectLink={url} 
+                    githubLink={githubLink} languages={languages} 
+                    tools={tools} softSkills={softSkills}
+                    about={about} challenges={challenges}/>
+        <div id="features" class="w-full h-fit">
+            <div class="flex flex-col w-full py-16 px-14 sm:px-8 gap-14">
+                <div class="flex mx-auto py-6 featureTitleSmallScreen">
+                    <h2>Features</h2>
+                </div>
+                <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" onmouseover="this.querySelector('.contentImage').play()"
+                onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0">
+                    <div class="flex flex-row w-full h-fit px-8 featureTitleSmallScreen">
+                        <h3 class="px-8 featureTitleSmallScreen">Towers & Enemies</h3>
+                    </div>
+                    <div class="flex flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
+                        <div class="flex flex-col gap-4 w-[50%] p-8 featureSmallScreen">
+                            <p>Being a tower defense game, the game has one tower type and two enemy variants;</p>
+                            <p>Towers can be placed in specific blocks, which can be bought to increase the total number of towers;</p>
+                            <ul>
+                                <li class="list-disc list-inside">Maybe be upgraded?</span></li>
+                                <li class="list-disc list-inside">I don;t remember</span></li>
+                            </ul>
+                            <p>Enemies can either be a <span class="text-[#A2A372]">regular</span> or <span class="text-[#A2A372]">boss</span>:</p>
+                            <ul>
+                                <li class="list-disc list-inside"><span class="text-[#A2A372]">Regular</span> ones have low HP but move moderately fast.</li>
+                                <li class="list-disc list-inside"><span class="text-[#A2A372]">Bosses</span> have tons of HP but move insanely slow.</li>
+                            </ul>
+                        </div>
+                        <div class="flex w-[50%] h-full m-auto featureVideoSmallScreen">
+                            <video class="rounded-sm">
+                                <source src="" />
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" onmouseover="this.querySelector('.contentImage').play()"
+                onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0">
+                    <div class="flex flex-row w-full h-fit px-8 justify-end featureTitleSmallScreen">
+                        <h3 class="px-8 featureTitleSmallScreen">Workers</h3>
+                    </div>
+                    <div class="flex flex-col sm:flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
+                        <div class="flex flex-col gap-4 w-full sm:w-[50%] p-0 sm:p-8">
+                            <p>To turn this game into an unusual tower defense game, I decided to add workers, <span class="text-[#A2A372]">inspired by Starcraft II</span>, where said workers mine crystals and deliver it to the base upon gatherinng completion.</p>
+                            <p>The player starts with a single worker which produces 10 currency every X seconds, however more can be bought and upgraded:</p>
+                            <ul>
+                                <li class="list-disc list-inside">The player may own up to <span class="text-[#A2A372]">6 workers;</span></li>
+                                <li class="list-disc list-inside">Upgrading workers makes them <span class="text-[#A2A372]">move faster.</span></li>
+                            </ul>
+                            <p>With full workers and having them fully upgraded, currency starts to flow resonably well.</p>
+                        </div>
+                        <div class="flex w-full sm:w-[50%] h-full m-auto featureTextSmallScreen order-last sm:order-first">
+                            <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" 
+                                onmouseleave="this.classList.remove('scaleVideo');">
+                                <source src="" type="video/webm"/>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    <script type="module">
+        import { handleAutoplay } from "/src/scripts/autoplay.js";
+        handleAutoplay();
+    </script>
+</Layout>

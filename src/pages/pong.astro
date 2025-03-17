@@ -1,0 +1,125 @@
+---
+
+import Layout from "../layouts/Layout.astro";
+
+import csharp from '../assets/csharp.png';
+import unity from '../assets/unity.png';
+import ProjectHero from "../components/ProjectHero.astro";
+
+import gamemodes from '../assets/videos/pong_video_gamemodes.webm';
+import highscoresOptions from '../assets/videos/pong_video_highscores_options.webm';
+
+const url = "https://play.unity.com/en/games/b52b3db0-98f9-4662-8f4d-8660148fd8e4/pong";
+const githubLink = "https://www.github.com/pdPinho/Pong-Game";
+
+const languages = [
+    {
+        text: "C Sharp",
+        img: csharp,
+        alt: "C Sharp icon"
+    }
+]
+
+const tools = [
+    {
+        text: "Unity",
+        img: unity,
+        alt: "Unity icon"
+    }
+]
+
+const softSkills = [
+    "Problem Solving",
+    "Creativity"
+]
+
+const about = [
+    "My first solo game created without the help of specific tutorials.",
+    "This was an experimental project intended to test my programming skills, without relying on example code or guides.",
+]
+
+const challenges = [
+    "My biggest challenge was learning how to write and read files correctly within the code. I used my new understanding to display \"Highscores\" in the game.",
+    "Creating ball physics and different AI difficulties was also a fun and challenging experience."
+]
+
+---
+<Layout pageTitle="Pong">
+    <div class="mx-auto min-h-screen max-w-screen-xl">
+		<ProjectHero title="Pong" projectLink={url} 
+                    githubLink={githubLink} languages={languages} 
+                    tools={tools} softSkills={softSkills}
+                    about={about} challenges={challenges}/>
+        <div id="features" class="w-full h-fit">
+            <div class="flex flex-col w-full py-16 px-14 sm:px-8 gap-14">
+                <div class="flex mx-auto py-6 featureTitleSmallScreen">
+                    <h2>Features</h2>
+                </div>
+                <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" onmouseover="this.querySelector('.contentImage').play()"
+                onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0">
+                    <div class="flex flex-row w-full h-fit px-8 featureTitleSmallScreen">
+                        <h3 class="px-8 featureTitleSmallScreen">Game Modes</h3>
+                    </div>
+                    <div class="flex flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
+                        <div class="flex flex-col gap-4 w-[50%] p-8 featureTextSmallScreen">
+                            <p>There are three different game types:</p>
+                            <ul>
+                                <li class="list-disc list-inside text-[#A2A372]">Campaign, which includes 4 levels;</li>
+                                <li class="list-disc list-inside text-[#A2A372]">Endless mode;</li>
+                                <li class="list-disc list-inside text-[#A2A372]">Lives mode, which ends after 3 loses.</li>
+                            </ul>
+                            <p>When playing you are prompted with the following difficulty options:</p>
+                            <ul>
+                                <li class="list-disc list-inside text-[#A2A372]">Easy;</li>
+                                <li class="list-disc list-inside text-[#A2A372]">Medium;</li>
+                                <li class="list-disc list-inside text-[#A2A372]">Hard;</li>
+                                <li class="list-disc list-inside text-[#A2A372]">Insane.</li>
+                            </ul>
+                            <div class="flex flex-col line-h">
+                                <p>Easy only tracks the ball when nearby;</p>
+                                <p>Medium has an increased track range;</p>
+                                <p>Hard has higher speed and tracking than medium;</p>
+                                <p>Insane is always tracking the ball and moving at high speed.</p>
+                            </div>
+                        </div>
+                        <div class="flex w-[50%] h-full m-auto featureVideoSmallScreen">
+                            <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" onmouseleave="this.classList.remove('scaleVideo');">
+                                <source src={gamemodes} type="video/webm"/>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" onmouseover="this.querySelector('.contentImage').play()"
+                onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0">
+                    
+                    <div class="flex flex-row w-full h-fit px-8 justify-end featureTitleSmallScreen">
+                        <h3 class="px-8 featureTitleSmallScreen">Highscores & Options</h3>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
+                        <div class="flex flex-col gap-4 w-full sm:w-[50%] p-0 sm:p-8">
+                            <p>The game keeps track of:</p>
+                            <ul>
+                                <li class="list-disc list-inside text-[#A2A372]">Total campaign loses vs AI;</li>
+                                <li class="list-disc list-inside text-[#A2A372]">Endless AI total scores;</li>
+                                <li class="list-disc list-inside text-[#A2A372]">How many lives you lost during Lives mode</li>
+                            </ul>
+                            <p>Players are also able to change their prefered keys from 'W' and 'S' to Arrow Up, Arrow Down in the options by selecting the box at the top.</p>
+                        </div>
+
+                        <div class="flex w-full sm:w-[50%] h-full m-auto featureTextSmallScreen order-last sm:order-first">
+                            <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" 
+                                onmouseleave="this.classList.remove('scaleVideo');">
+                                <source src={highscoresOptions} type="video/webm"/>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    <script type="module">
+        import { handleAutoplay } from "/src/scripts/autoplay.js";
+        handleAutoplay();
+    </script>
+</Layout>
