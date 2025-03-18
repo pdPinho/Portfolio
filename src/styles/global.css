@@ -195,17 +195,6 @@
         padding: 0;
         padding-top: 14px;
     }
-
-    #name {
-        padding-left: 32px;
-        text-align: left;
-        align-items: left;
-    }
-
-    #media {
-        text-align: left;
-        align-items: left;
-    }
 }
 
 @media screen and (min-width: 1024px){
@@ -347,9 +336,6 @@
         text-align: center;
     }
 
-    #name {
-        align-items: center;
-    }
 }
 
 h1, h2, h3 {
