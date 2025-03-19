@@ -41,59 +41,67 @@ const about = [
 
 ---
 <Layout pageTitle="Tower Defense">
-    <div class="mx-auto min-h-screen max-w-screen-xl">
-		<ProjectHero title="Tower Defense" projectLink={url} 
+    <div class="w-full min-h-screen">
+		<div class="background-divider bottom-divider">
+			<div class="mx-auto max-w-screen-xl">
+                <ProjectHero title="Tower Defense" projectLink={url} 
                     githubLink={githubLink} languages={languages} 
                     tools={tools} softSkills={softSkills}
                     about={about} noChallenges={true}/>
-        <div id="features" class="w-full h-fit">
-            <div class="flex flex-col w-full py-16 px-14 sm:px-8 gap-14">
-                <div class="flex mx-auto py-6 featureTitleSmallScreen">
-                    <h2>Features</h2>
-                </div>
-                <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen">
-                    <div class="flex flex-row w-full h-fit px-8 featureTitleSmallScreen">
-                        <h3 class="px-8 featureTitleSmallScreen">Towers & Enemies</h3>
-                    </div>
-                    <div class="flex flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
-                        <div class="flex flex-col gap-4 w-[50%] p-8 featureSmallScreen">
-                            <p>The game features one type of tower and four distinct enemy variants.</p>
-                            <p>Towers can only be placed on designated blocks, each costing 50 crystals to build. The player starts with a maximum of 7 available blocks and a 3-tower limit, both of which can be upgraded to a maximum of 11.</p>
-                            <p>Enemy types include:</p>
-                            <ul>
-                                <li class="list-disc list-inside"><span class="text-[#A2A372]">Peons</span> — Low HP but average movement speed.</li>
-                                <li class="list-disc list-inside"><span class="text-[#A2A372]">Rushers</span> — Extremely fragile but incredibly fast.</li>
-                                <li class="list-disc list-inside"><span class="text-[#A2A372]">Knights</span> — Moderate HP with a decent movement speed.</li>
-                                <li class="list-disc list-inside"><span class="text-[#A2A372]">Tanks</span> — Very high HP but extremely slow movement.</li>
-                            </ul>
+            </div>
+        </div>
+        <div class="background-divider top-divider">
+            <div class="mx-auto max-w-screen-xl">
+                <div id="features" class="w-full h-fit">
+                    <div class="flex flex-col w-full py-16 px-14 sm:px-8 gap-14">
+                        <div class="flex mx-auto py-6 featureTitleSmallScreen">
+                            <h2>Features</h2>
                         </div>
-                        <div class="flex w-full sm:w-[50%] h-full m-auto featureTextSmallScreen">
-                            <Image src={enemiesImage} alt="enemy types image" class="mx-auto h-fit"/>
+                        <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen">
+                            <div class="flex flex-row w-full h-fit px-8 featureTitleSmallScreen">
+                                <h3 class="px-8 featureTitleSmallScreen">Towers & Enemies</h3>
+                            </div>
+                            <div class="flex flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
+                                <div class="flex flex-col gap-4 w-[50%] p-8 featureSmallScreen">
+                                    <p>The game features one type of tower and four distinct enemy variants.</p>
+                                    <p>Towers can only be placed on designated blocks, each costing 50 crystals to build. The player starts with a maximum of 7 available blocks and a 3-tower limit, both of which can be upgraded to a maximum of 11.</p>
+                                    <p>Enemy types include:</p>
+                                    <ul>
+                                        <li class="list-disc list-inside"><span class="text-[#A2A372]">Peons</span> — Low HP but average movement speed.</li>
+                                        <li class="list-disc list-inside"><span class="text-[#A2A372]">Rushers</span> — Extremely fragile but incredibly fast.</li>
+                                        <li class="list-disc list-inside"><span class="text-[#A2A372]">Knights</span> — Moderate HP with a decent movement speed.</li>
+                                        <li class="list-disc list-inside"><span class="text-[#A2A372]">Tanks</span> — Very high HP but extremely slow movement.</li>
+                                    </ul>
+                                </div>
+                                <div class="flex w-full sm:w-[50%] h-full m-auto featureTextSmallScreen">
+                                    <Image src={enemiesImage} alt="enemy types image" class="mx-auto h-fit"/>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" 
-                    onmouseover="this.querySelector('.contentImage').play()"
-                    onmouseleave="this.querySelector('.contentImage').pause(); 
-                    this.querySelector('.contentImage').currentTime = 0">
-                    <div class="flex flex-row w-full h-fit px-8 justify-end featureTitleSmallScreen">
-                        <h3 class="px-8 featureTitleSmallScreen">Workers</h3>
-                    </div>
-                    <div class="flex flex-col sm:flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
-                        <div class="flex flex-col gap-4 w-full sm:w-[50%] p-0 sm:p-8">
-                            <p><span class="text-[#A2A372]">Inspired by Starcraft II</span>, where said workers mine crystals and deliver it to the base, I added a similar feature to this game.</p>
-                            <p>The player starts with a single worker which produces 10 crystals every X seconds, however more can be bought and upgraded:</p>
-                            <ul>
-                                <li class="list-disc list-inside">The player may own up to <span class="text-[#A2A372]">5 workers;</span></li>
-                                <li class="list-disc list-inside">Upgrading workers makes them <span class="text-[#A2A372]">move faster.</span></li>
-                            </ul>
-                        </div>
-                        <div class="flex w-full sm:w-[50%] h-full m-auto featureTextSmallScreen order-last sm:order-first">
-                            <video class="rounded-sm contentImage" 
-                                onclick="this.classList.toggle('scaleVideo')" 
-                                onmouseleave="this.classList.remove('scaleVideo');">
-                                <source src={workerVideo} type="video/webm"/>
-                            </video>
+                        <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" 
+                            onmouseover="this.querySelector('.contentImage').play()"
+                            onmouseleave="this.querySelector('.contentImage').pause(); 
+                            this.querySelector('.contentImage').currentTime = 0">
+                            <div class="flex flex-row w-full h-fit px-8 justify-end featureTitleSmallScreen">
+                                <h3 class="px-8 featureTitleSmallScreen">Workers</h3>
+                            </div>
+                            <div class="flex flex-col sm:flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
+                                <div class="flex flex-col gap-4 w-full sm:w-[50%] p-0 sm:p-8">
+                                    <p><span class="text-[#A2A372]">Inspired by Starcraft II</span>, where said workers mine crystals and deliver it to the base, I added a similar feature to this game.</p>
+                                    <p>The player starts with a single worker which produces 10 crystals every X seconds, however more can be bought and upgraded:</p>
+                                    <ul>
+                                        <li class="list-disc list-inside">The player may own up to <span class="text-[#A2A372]">5 workers;</span></li>
+                                        <li class="list-disc list-inside">Upgrading workers makes them <span class="text-[#A2A372]">move faster.</span></li>
+                                    </ul>
+                                </div>
+                                <div class="flex w-full sm:w-[50%] h-full m-auto featureTextSmallScreen order-last sm:order-first">
+                                    <video class="rounded-sm contentImage" 
+                                        onclick="this.classList.toggle('scaleVideo')" 
+                                        onmouseleave="this.classList.remove('scaleVideo');">
+                                        <source src={workerVideo} type="video/webm"/>
+                                    </video>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

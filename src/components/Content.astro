@@ -2,8 +2,11 @@
 const { object, last, isWebsite } = Astro.props;
 ---
 <a href={object.url}>
-    <li class="flex flex-wrap h-fit content" onmouseover="this.querySelector('.contentImage').play()"
-    onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0;">
+    <li class="flex flex-wrap h-fit content"
+        onmouseover="this.querySelector('.contentImage').play()"
+        onmouseleave="this.querySelector('.contentImage').pause(); 
+        this.querySelector('.contentImage').currentTime = 0;">
+        
         <div class=`${isWebsite ? "w-[55%]" : "w-[50%]"} h-fit p-2.5 gap-2.5 flex flex-col contentTextSmallScreen`>
             <p class="medium font-medium">{object.title}</p>
             {isWebsite ?

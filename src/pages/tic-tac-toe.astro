@@ -47,105 +47,113 @@ const challenges = [
 
 ---
 <Layout pageTitle="Tic Tac Toe">
-    <div class="mx-auto min-h-screen max-w-screen-xl">
-		<ProjectHero title="Tic-Tac-Toe" projectLink={url} 
-                    githubLink={githubLink} languages={languages} 
-                    tools={tools} softSkills={softSkills}
-                    about={about} challenges={challenges}/>
-        <div id="features" class="w-full h-fit">
-            <div class="flex flex-col w-full py-16 px-14 sm:px-8 gap-14">
-                <div class="flex mx-auto py-6 featureTitleSmallScreen">
-                    <h2>Features</h2>
-                </div>
-                <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" onmouseover="this.querySelector('.contentImage').play()"
-                onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0">
-                    <div class="flex flex-row w-full h-fit px-8 featureTitleSmallScreen">
-                        <h3 class="px-8 featureTitleSmallScreen">Game Modes</h3>
-                    </div>
-                    <div class="flex flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
-                        <div class="flex flex-col gap-4 w-[50%] p-12 sm:p-8 featureTextSmallScreen">
-                            <p>There are two different game types:</p>
-                            <ul>
-                                <li class="list-disc list-inside text-[#A2A372]">Player vs Local Player;</li>
-                                <li class="list-disc list-inside text-[#A2A372]">Player vs AI;</li>
-                            </ul>
-                            <p>There are three AI difficulties to choose from:</p>
-                            <ul>
-                                <li class="list-disc list-inside text-[#A2A372]">Easy;</li>
-                                <li class="list-disc list-inside text-[#A2A372]">Medium;</li>
-                                <li class="list-disc list-inside text-[#A2A372]">Hard.</li>
-                            </ul>
-                            <div class="flex flex-col line-h">
-                                <p>Easy uses random choices;</p>
-                                <p>Medium uses half-random, half-smart;</p>
-                                <p>Hard uses an algorithm that always chooses the best option.</p>
+    <div class="w-full min-h-screen">
+		<div class="background-divider bottom-divider">
+			<div class="mx-auto max-w-screen-xl">
+                    <ProjectHero title="Tic-Tac-Toe" projectLink={url} 
+                                githubLink={githubLink} languages={languages} 
+                                tools={tools} softSkills={softSkills}
+                                about={about} challenges={challenges}/>
+            </div>
+        </div>
+        <div class="background-divider top-divider">
+            <div class="mx-auto max-w-screen-xl">
+                <div id="features" class="w-full h-fit">
+                    <div class="flex flex-col w-full py-16 px-14 sm:px-8 gap-14">
+                        <div class="flex mx-auto py-6 featureTitleSmallScreen">
+                            <h2>Features</h2>
+                        </div>
+                        <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" onmouseover="this.querySelector('.contentImage').play()"
+                        onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0">
+                            <div class="flex flex-row w-full h-fit px-8 featureTitleSmallScreen">
+                                <h3 class="px-8 featureTitleSmallScreen">Game Modes</h3>
                             </div>
-                            <p>Each playthrough is 
-                                <span class="text-[#A2A372]">saved in a file</span> 
-                                (up to three), which has 
-                                <span class="text-[#A2A372]">achievements</span> and 
-                                <span class="text-[#A2A372]">currency</span> attached to it, which can later be used to 
-                                <span class="text-[#A2A372]">purchase cosmetics</span> for the X and O images.</p>
+                            <div class="flex flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
+                                <div class="flex flex-col gap-4 w-[50%] p-12 sm:p-8 featureTextSmallScreen">
+                                    <p>There are two different game types:</p>
+                                    <ul>
+                                        <li class="list-disc list-inside text-[#A2A372]">Player vs Local Player;</li>
+                                        <li class="list-disc list-inside text-[#A2A372]">Player vs AI;</li>
+                                    </ul>
+                                    <p>There are three AI difficulties to choose from:</p>
+                                    <ul>
+                                        <li class="list-disc list-inside text-[#A2A372]">Easy;</li>
+                                        <li class="list-disc list-inside text-[#A2A372]">Medium;</li>
+                                        <li class="list-disc list-inside text-[#A2A372]">Hard.</li>
+                                    </ul>
+                                    <div class="flex flex-col line-h">
+                                        <p>Easy uses random choices;</p>
+                                        <p>Medium uses half-random, half-smart;</p>
+                                        <p>Hard uses an algorithm that always chooses the best option.</p>
+                                    </div>
+                                    <p>Each playthrough is 
+                                        <span class="text-[#A2A372]">saved in a file</span> 
+                                        (up to three), which has 
+                                        <span class="text-[#A2A372]">achievements</span> and 
+                                        <span class="text-[#A2A372]">currency</span> attached to it, which can later be used to 
+                                        <span class="text-[#A2A372]">purchase cosmetics</span> for the X and O images.</p>
+                                </div>
+                                <div class="flex w-[50%] h-full m-auto featureVideoSmallScreen">
+                                    <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" onmouseleave="this.classList.remove('scaleVideo');">
+                                        <source src={gamemodes} />
+                                    </video>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex w-[50%] h-full m-auto featureVideoSmallScreen">
-                            <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" onmouseleave="this.classList.remove('scaleVideo');">
-                                <source src={gamemodes} />
-                            </video>
+                        <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" onmouseover="this.querySelector('.contentImage').play()"
+                        onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0">
+                            <div class="flex flex-row w-full h-fit px-8 justify-end featureTitleSmallScreen">
+                                <h3 class="px-8 featureTitleSmallScreen">Achievements & Shop</h3>
+                            </div>
+                            <div class="flex flex-row sm:flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
+                                <div class="flex flex-col gap-4 w-full sm:w-[50%] p-0 sm:p-8">
+                                    <p>Throughout the game players can earn currency by playing:</p>
+                                    <ul>
+                                        <li class="list-disc list-inside">PvP earns <span class="text-[#A2A372]">1 coin in victory;</span></li>
+                                        <li class="list-disc list-inside">PvE earns <span class="text-[#A2A372]">2 coins in victory, 1 in draw;</span></li>
+                                    </ul>
+                                    <p>These coins can then later be used to unlock a variety of skins for the letters <span class="text-[#A2A372]">X</span> and <span class="text-[#A2A372]">O</span>.</p>
+                                    <p>Throughout the game, players can also earn <span class="text-[#A2A372]">in-game achievements</span> by meeting certain criteria, such as playing X games or earning X coins.</p>
+                                    <p>All of these features are associated to a save file.</p>
+                                </div>
+                                <div class="flex w-full sm:w-[50%] h-full m-auto featureTextSmallScreen order-last sm:order-first">
+                                    <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" 
+                                        onmouseleave="this.classList.remove('scaleVideo');">
+                                        <source src={shopAchievements} type="video/webm"/>
+                                    </video>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" onmouseover="this.querySelector('.contentImage').play()"
-                onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0">
-                    <div class="flex flex-row w-full h-fit px-8 justify-end featureTitleSmallScreen">
-                        <h3 class="px-8 featureTitleSmallScreen">Achievements & Shop</h3>
-                    </div>
-                    <div class="flex flex-row sm:flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
-                        <div class="flex flex-col gap-4 w-full sm:w-[50%] p-0 sm:p-8">
-                            <p>Throughout the game players can earn currency by playing:</p>
-                            <ul>
-                                <li class="list-disc list-inside">PvP earns <span class="text-[#A2A372]">1 coin in victory;</span></li>
-                                <li class="list-disc list-inside">PvE earns <span class="text-[#A2A372]">2 coins in victory, 1 in draw;</span></li>
-                            </ul>
-                            <p>These coins can then later be used to unlock a variety of skins for the letters <span class="text-[#A2A372]">X</span> and <span class="text-[#A2A372]">O</span>.</p>
-                            <p>Throughout the game, players can also earn <span class="text-[#A2A372]">in-game achievements</span> by meeting certain criteria, such as playing X games or earning X coins.</p>
-                            <p>All of these features are associated to a save file.</p>
-                        </div>
-                        <div class="flex w-full sm:w-[50%] h-full m-auto featureTextSmallScreen order-last sm:order-first">
-                            <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" 
-                                onmouseleave="this.classList.remove('scaleVideo');">
-                                <source src={shopAchievements} type="video/webm"/>
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" onmouseover="this.querySelector('.contentImage').play()"
-                onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0">
-                    <div class="flex flex-row w-full h-fit px-8 featureTitleSmallScreen">
-                        <h3 class="px-8 featureTitleSmallScreen">Profile</h3>
-                    </div>
-                    <div class="flex flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
-                        <div class="flex flex-col gap-4 w-[50%] p-8 featureTextSmallScreen">
-                            <p>Save files have a profile attached to it which contains:</p>
-                            <ul>
-                                <li class="list-disc list-inside">Number of games played;</li>
-                                <li class="list-disc list-inside">Number of games won;</li>
-                                <li class="list-disc list-inside">Number of games lost;</li>
-                                <li class="list-disc list-inside">Most coins ever owned at once;</li>
-                                <li class="list-disc list-inside">Current number of coins;</li>
-                                <li class="list-disc list-inside">Number of skins unlocked;</li>
-                                <li class="list-disc list-inside">Access to menu where it displays owned skins.</li>
-                            </ul>
-                        </div>
-                        <div class="flex w-[50%] h-full m-auto featureVideoSmallScreen">
-                            <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" onmouseleave="this.classList.remove('scaleVideo');">
-                                <source src={profile} />
-                            </video>
+                        <div class="flex flex-col w-full h-fit py-3 px-8 featureSmallScreen" onmouseover="this.querySelector('.contentImage').play()"
+                        onmouseleave="this.querySelector('.contentImage').pause(); this.querySelector('.contentImage').currentTime = 0">
+                            <div class="flex flex-row w-full h-fit px-8 featureTitleSmallScreen">
+                                <h3 class="px-8 featureTitleSmallScreen">Profile</h3>
+                            </div>
+                            <div class="flex flex-row w-full h-fit px-8 gap-3 featureSmallScreen">
+                                <div class="flex flex-col gap-4 w-[50%] p-8 featureTextSmallScreen">
+                                    <p>Save files have a profile attached to it which contains:</p>
+                                    <ul>
+                                        <li class="list-disc list-inside">Number of games played;</li>
+                                        <li class="list-disc list-inside">Number of games won;</li>
+                                        <li class="list-disc list-inside">Number of games lost;</li>
+                                        <li class="list-disc list-inside">Most coins ever owned at once;</li>
+                                        <li class="list-disc list-inside">Current number of coins;</li>
+                                        <li class="list-disc list-inside">Number of skins unlocked;</li>
+                                        <li class="list-disc list-inside">Access to menu where it displays owned skins.</li>
+                                    </ul>
+                                </div>
+                                <div class="flex w-[50%] h-full m-auto featureVideoSmallScreen">
+                                    <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" onmouseleave="this.classList.remove('scaleVideo');">
+                                        <source src={profile} />
+                                    </video>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-	</div>
+    </div>
     <script type="module">
         import { handleAutoplay } from "/src/scripts/autoplay.js";
         handleAutoplay();
