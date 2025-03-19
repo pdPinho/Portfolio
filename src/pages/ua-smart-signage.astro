@@ -15,7 +15,15 @@ const softSkills = [
 <Layout pageTitle="UA Smart Signage">
     <div class="mx-auto min-h-screen max-w-screen-xl">
         <div class="w-full h-fit gap-8">
-            <div id="contact_about" class="w-full h-full py-11 px-8 gap-8 flex flex-row">
+            <a href="/" class="medium flex flex-row text-[#A8B0C6] w-fit hover:brightness-120 items-center pl-7 sm:pl-12">
+                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg class="w-8 h-8 mr-2" viewBox="0 0 1024 1024" class="icon" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#A8B0C6" d="M224 480h640a32 32 0 110 64H224a32 32 0 010-64z"/>
+                    <path fill="#A8B0C6" d="M237.248 512l265.408 265.344a32 32 0 01-45.312 45.312l-288-288a32 32 0 010-45.312l288-288a32 32 0 1145.312 45.312L237.248 512z"/>
+                </svg>
+                Back to home
+            </a>
+            <div id="contact_about" class="w-full h-full pt-11 px-8 gap-8 flex flex-row">
                 <div id="contact" class="flex flex-col w-full h-fit">
                     <div id="name" class="flex flex-col gap-8 sm:items-center">
                         <h1>UA Smart Signage</h1>
@@ -31,11 +39,11 @@ const softSkills = [
                     </div>
                 </div>
             </div>
-            <div id="techstack_about" class="flex flex-row w-full h-full pt-11 pb-48 px-8 gap-8">
+            <div id="techstack_about" class="flex flex-row w-full h-full pt-11 pb-48 sm:px-8 gap-8">
                 <div id="techstack_softskills" class="flex flex-col w-[50%] gap-11 px-6">
                     <div class="flex flex-col gap-5 h-fit w-full">
                         <h2 class="w-full">Tech Stack & Features</h2>
-                        <div class="flex flex-col gap-5 px-3">
+                        <div class="flex flex-col gap-5 sm:px-3">
                             <div class="flex">
                                 <p class="medium">Due to the complexity of this software, please refer to the 
                                     <a href="https://ua-smart-signage-platform.github.io/Documentation-Website/documentation/introduction/">
@@ -78,7 +86,7 @@ const softSkills = [
                     </div>
                     <div id="softskills" class="flex flex-col gap-4 h-fit w-full">
                         <h3 class="w-full">Soft skills</h3>
-                        <ul class="flex flex-wrap px-3 gap-2.5 w-[75%]">
+                        <ul class="flex flex-wrap sm:px-3 gap-2.5 w-[75%]">
                             {softSkills.map((skill) =>
                                 <li class="flex rounded-xl w-fit h-fit text-[#1F0F1F] bg-[#A8B0C6] py-1 px-1.5 font-medium">{skill}</li>
                             )}
