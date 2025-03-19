@@ -74,7 +74,7 @@ const about = [
                                     </ul>
                                 </div>
                                 <div class="flex w-full sm:w-[50%] h-full m-auto featureTextSmallScreen">
-                                    <Image src={enemiesImage} alt="enemy types image" class="mx-auto h-fit"/>
+                                    <Image src={enemiesImage} alt="enemy types image" class="mx-auto h-fit scaleVideo"/>
                                 </div>
                             </div>
                         </div>
@@ -94,10 +94,8 @@ const about = [
                                         <li class="list-disc list-inside">Upgrading workers makes them <span class="text-[#A2A372]">move faster.</span></li>
                                     </ul>
                                 </div>
-                                <div class="flex w-full sm:w-[50%] h-full m-auto featureTextSmallScreen order-last sm:order-first">
-                                    <video class="rounded-sm contentImage" 
-                                        onclick="this.classList.toggle('scaleVideo')" 
-                                        onmouseleave="this.classList.remove('scaleVideo');">
+                                <div class="flex w-full sm:w-[50%] h-full m-auto featureTextSmallScreen order-last sm:order-first scaleVideo">
+                                    <video class="rounded-sm contentImage">
                                         <source src={workerVideo} type="video/webm"/>
                                     </video>
                                 </div>

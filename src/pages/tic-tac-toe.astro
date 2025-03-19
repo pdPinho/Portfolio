@@ -93,8 +93,8 @@ const challenges = [
                                         <span class="text-[#A2A372]">currency</span> attached to it, which can later be used to 
                                         <span class="text-[#A2A372]">purchase cosmetics</span> for the X and O images.</p>
                                 </div>
-                                <div class="flex w-[50%] h-full m-auto featureVideoSmallScreen">
-                                    <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" onmouseleave="this.classList.remove('scaleVideo');">
+                                <div class="flex w-[50%] h-full m-auto featureVideoSmallScreen scaleVideo">
+                                    <video class="rounded-sm contentImage">
                                         <source src={gamemodes} />
                                     </video>
                                 </div>
@@ -116,9 +116,8 @@ const challenges = [
                                     <p>Throughout the game, players can also earn <span class="text-[#A2A372]">in-game achievements</span> by meeting certain criteria, such as playing X games or earning X coins.</p>
                                     <p>All of these features are associated to a save file.</p>
                                 </div>
-                                <div class="flex w-full sm:w-[50%] h-full m-auto featureTextSmallScreen order-last sm:order-first">
-                                    <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" 
-                                        onmouseleave="this.classList.remove('scaleVideo');">
+                                <div class="flex w-full sm:w-[50%] h-full m-auto featureTextSmallScreen order-last sm:order-first scaleVideo">
+                                    <video class="rounded-sm contentImage">
                                         <source src={shopAchievements} type="video/webm"/>
                                     </video>
                                 </div>
@@ -142,8 +141,8 @@ const challenges = [
                                         <li class="list-disc list-inside">Access to menu where it displays owned skins.</li>
                                     </ul>
                                 </div>
-                                <div class="flex w-[50%] h-full m-auto featureVideoSmallScreen">
-                                    <video class="rounded-sm contentImage" onclick="this.classList.toggle('scaleVideo')" onmouseleave="this.classList.remove('scaleVideo');">
+                                <div class="flex w-[50%] h-full m-auto featureVideoSmallScreen scaleVideo">
+                                    <video class="rounded-sm contentImage">
                                         <source src={profile} />
                                     </video>
                                 </div>

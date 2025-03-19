@@ -1,10 +1,19 @@
 ---
-const { title, projectLink, githubLink, languages, tools, softSkills, about, challenges, noURL, noChallenges } = Astro.props;
 import Image from "astro/components/Image.astro";
+import backIcon from '../assets/back_icon.svg';
 
+const { title, projectLink, githubLink, languages, tools, softSkills, about, challenges, noURL, noChallenges } = Astro.props;
 ---
 <div id="contact_about" class="w-full h-fit gap-8">
-    <div class="w-full h-full py-11 px-8 gap-8 flex flex-row">
+    <a href="/" class="medium flex flex-row text-[#A8B0C6] w-fit hover:brightness-120 items-center">
+        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+        <svg class="w-8 h-8 mr-2" viewBox="0 0 1024 1024" class="icon" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#A8B0C6" d="M224 480h640a32 32 0 110 64H224a32 32 0 010-64z"/>
+            <path fill="#A8B0C6" d="M237.248 512l265.408 265.344a32 32 0 01-45.312 45.312l-288-288a32 32 0 010-45.312l288-288a32 32 0 1145.312 45.312L237.248 512z"/>
+        </svg>
+        Back to home
+    </a>
+    <div class="w-full h-full pt-6 pb-11 px-8 gap-8 flex flex-row">
         <div id="contact" class="flex flex-col w-full h-fit">
             <div id="name" class="flex flex-col gap-8 sm:pl-0 pl-8 sm:items-center">
                 <h1>{title}</h1>
